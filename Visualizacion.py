@@ -19,19 +19,12 @@ class CLS_Estructura_Visualizacion:
         Genera la pantalla principal, habilita la impresión del df de muestra, carga y trasnformación de datos
         '''
         st.title(titulo)
-        self.dataframe_serie_tiempo=self.habilitar_carga_datos("Cargar información XLSX")
-        # self.df_regresores=self.habilitar_carga_datos("Cargar regresores")
-        self.transformar_datos()
       
     def Mostrar_Pantalla_archivos_muestra(self, titulo) -> None:
         '''
         Genera la pantalla principal, habilita la impresión del df de muestra, carga y trasnformación de datos
         '''
         st.title(titulo)
-        st.write('Cargar datos de una zona en específica')          
-        self.generacion_df_muestra(self.columnas_df)
-        st.write('Cargar datos de una diferentes zonas indicando en la columna categoría la zona correspondiente')    
-        self.generacion_df_muestra(self.columnas_df+['Categoria'])
 
     def mostrar_navegabilidad(self):
         st.sidebar.header("Navegación")
